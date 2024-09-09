@@ -1,0 +1,1081 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  height: auto;
+  margin: 0; padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+
+body.offcanvas-menu:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+p {
+  color: #b3b3b3;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+a, a:hover {
+  text-decoration: none !important;
+}
+
+.hero {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  overflow: hidden; /* Hide any overflow */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  margin-top: 3%;
+}
+
+.background-video {
+  position: absolute;
+  top:1%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(60%);
+  object-fit: cover; /* Ensures the video covers the entire hero section without distortion */
+  /* Keep video behind content */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* Ensure this is above the video */
+  color: white; /* Adjust based on your design */
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh; /* Maintain full viewport height on smaller screens */
+  }
+
+  .background-video {
+    object-fit: cover; /* Ensure the video scales and covers smaller screens */
+  }
+}
+
+.driving-excellence-in-container {
+  position: absolute; /* Absolute positioning to control its position */
+  top: 42%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjusts the element's position to be centered */
+  font-size: 4.5rem; /* Font size */
+  text-align: center; /* Centers the text itself */
+  width: 80%; /* Adjusts the width to ensure it fits within the viewport */
+  max-width: 1000px; /* Optional: set a maximum width to prevent it from being too wide */
+  margin: 0 auto; /* Ensures it's centered within the container */
+  color: #ffffff;
+  font-weight: 600; /* Optional: adjust text color as needed */
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 1200px) {
+  .driving-excellence-in-container {
+    font-size: 3.5rem; /* Slightly smaller for screens below 1200px */
+  }
+}
+
+@media (max-width: 992px) {
+  .driving-excellence-in-container {
+    font-size: 3rem; /* Smaller font size for tablets and small desktops */
+  }
+}
+
+@media (max-width: 768px) {
+  .driving-excellence-in-container {
+    font-size: 2.5rem; /* Even smaller for mobile devices */
+  }
+}
+
+@media (max-width: 576px) {
+  .driving-excellence-in-container {
+    font-size: 2rem; 
+    height: 10%;/* Smallest font size for very small devices */
+  }
+}
+
+.subline {
+  position: absolute; /* Absolute positioning to control its position */
+  top: 63%; /* Adjusted to place the paragraph slightly below the center */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Centers the element */
+  font-size: 1.22rem;
+  width: 80%; /* Ensures it fits within the viewport */
+  max-width: 1000px; /* Optional: set a maximum width */
+  text-align: center; /* Centers the text itself */
+  margin: 0 auto; /* Ensures it's centered within the container */
+  color: #fff;
+  font-weight: 50; /* Optional: adjust text color as needed */
+}
+
+.GetINTouch {
+  background-color: #000dff;
+  border: none;
+  position: absolute; /* Absolute positioning to control its position */
+  top: 75%; /* Adjusted to place the button slightly below the paragraph */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Centers the element */
+  font-size: 1.5rem;
+  padding: 8px 13px; /* Adjust padding for better button size */
+  width: auto; /* Let the button size based on its content */
+  text-align: center; /* Center text within the button */
+  color: white; /* Button text color */
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Optional: rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease;
+  border: rgb(255, 255, 255);
+}
+
+.GetINTouch:hover {
+  background-color: white;
+  color: #000dff;
+}
+
+@media (max-width: 1000px) {
+  .GetINTouch {
+    font-size: 0.8rem;
+    width: 10rem;
+    height: auto; /* Slightly smaller for screens below 1200px */
+  }
+}
+
+@media (max-width: 592px) {
+  .GetINTouch {
+    font-size: 0.8rem;
+    width: 10rem;
+    height: auto;
+    /* Smaller font size for tablets and small desktops */
+  }
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 1000px) {
+  .subline {
+    font-size: 1.4rem;
+    break-after: auto; /* Slightly smaller for screens below 1200px */
+  }
+}
+
+@media (max-width: 592px) {
+  .subline {
+    font-size: 1.2rem;
+   height: -5%; /* Smaller font size for tablets and small desktops */
+  }
+}
+
+/****************************navbar***********************/
+/* Style for the entire navbar */
+/* Style for the entire navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fbfaff;
+  position: fixed; /* Fixes the navbar to the top */
+  top: 0;
+  font-family: 'Roboto', sans-serif;
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 1000; /* Makes sure it's on top of other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for a better effect */
+}
+
+/* Make sure the body starts below the navbar */
+body {
+  margin-top: 70px; /* Adjust this value according to the height of your navbar */
+}
+
+/* Logo styling */
+.navbar-brand {
+  width: 80px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  width: 100%;
+  height: auto;
+}
+
+/* Links styling */
+.navbar-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #001495;
+  font-weight: 480;
+
+}
+
+.navbar-links a:hover {
+  color: #0088ff;
+}
+
+/* Toggle button styling for smaller screens */
+.navbar-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-links.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/***********************cards***************************************/
+
+    /* Font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ecf9ff;
+}
+
+body {
+  color: #272727;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 44px;
+  font-weight: 550;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.btn2 {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  margin-top: 56%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  margin-top: 75%;
+}
+
+.btn1 {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  margin-top: 20%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  margin-top: 42%;
+}
+
+.btn4 {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  margin-top: 5%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  margin-top: 38%;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/******************************************cards*******************************************/
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.cards_item {
+  flex: 1 1 calc(25% - 20px);
+  margin: 10px;
+  display: flex;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  border: 4px rgb(255, 250, 250);  
+  border-style: solid;
+
+}
+
+.card_image img {
+  width: 100%;
+  height: auto;
+}
+
+.card_content {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.card_title {
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card_text {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card_btn {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card_btn:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive layout */
+@media (max-width: 1200px) {
+  .cards_item {
+    flex: 1 1 calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 900px) {
+  .cards_item {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards_item {
+    flex: 1 1 calc(100% - 20px);
+  }
+}
+
+/* Card Hover Animation */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Review Card Hover Animation */
+.review-card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Hover effect */
+.review-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/******************video**********************/
+
+
+
+.no-matter-the {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  line-height: 0.5rem;
+
+  font-weight: 700;
+  text-align: center;
+  width: 90%;
+  max-width: 72.5rem;
+  display: inline-block;
+  padding: 0 1rem; /* Adds padding to make it look better on smaller screens */
+}
+
+@media (max-width: 1200px) {
+  .no-matter-the {
+    font-size: 0.99rem;
+    line-height: 1.625rem;
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) {
+  .no-matter-the {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .no-matter-the {
+    font-size: 0.8rem;
+    line-height: 1.375rem;
+    width: 95%;
+  }
+}
+
+/*******************what we do***********************************/
+
+
+
+/************************about us***********************************/
+
+.about-us {
+  background: linear-gradient(180deg, #e0f2ff, #b0d4ff);
+  padding: 50px 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.text-content {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+}
+
+.text-content h2 {
+  color: #3f3d56;
+  font-size: 2.1em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.text-content h1 {
+  color: #003366;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  color: #3f3d56;
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.image-content {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  transform: translateX(0px) translateY(0px);
+  transition: transform 0.5s ease-in-out;
+}
+.image-content img:hover {
+  transform: translateX(40px) translateY(-10px); /* Moves the image slightly to the left and up on hover */
+}
+
+
+.learn-more-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2000ae;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .text-content h1 {
+    font-size: 2em;
+  }
+
+  .text-content p {
+    font-size: 1.1em;
+  }
+
+  .learn-more-button {
+    font-size: 1em;
+  }
+}
+
+/************************review****************************************/
+
+.client-reviews {
+  background-color: #ffffff;
+  padding: 50px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  color: #003366;
+  font-size: 2.7em;
+  margin-bottom: 40px;
+}
+
+.reviews-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
+  margin-bottom: 20px;
+}
+
+.image-content img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.review-card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.review-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.review-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.review-header p {
+  margin: 0;
+  color: #777;
+  font-size: 0.9em;
+}
+
+p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .reviews-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .review-card {
+    margin: 20px 0;
+  }
+
+  .image-content {
+    margin-bottom: 40px;
+  }
+}
+
+/***************************laptop*********************************/
+
+.contact-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.contact-section h2 {
+  color: #003366;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.laptop-container {
+  position: relative;
+  display: inline-block;
+  max-width: 80%;
+  text-align: left;
+}
+
+.laptop-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.form-container {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 48%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2600d0;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 800px) {
+  .form-container {
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    font-size: 0.9rem; /* Slightly smaller font size for mobile devices */
+  }
+  .laptop-image {
+    display: none;
+  }
+  .form-container {
+    position: static; /* Remove absolute positioning */
+    width: 90%; /* Adjust width to fit the screen */
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Further adjustments for even smaller screens */
+
+@media (max-width: 1200px) {
+  .form-container {
+    top: 8%;
+    left: 22%;
+
+    width: 60%;
+    font-size: 0.8rem; /* Smaller font size for smaller mobile devices */
+  }
+}
+
+@media (max-width: 1017px) {
+  .form-container {
+    top: 5%;
+    left: 28%;
+   height: 40%;
+    width: 50%;
+    font-size: 0.8rem; /* Smaller font size for smaller mobile devices */
+  }
+}
+@media (max-width: 800px) {
+  .form-container {
+    top: 5%;
+    left: 28%;
+   height: 40%;
+    width: 80%;
+    font-size: 0.8rem; /* Smaller font size for smaller mobile devices */
+  }
+}
+@media (max-width: 576px) {
+  .form-container {
+    top: 20%;
+    left: 8%;
+    width: 85%;
+    font-size: 0.8rem; /* Smaller font size for smaller mobile devices */
+  }
+}
+
+/* For very small devices like small phones */
+@media (max-width: 400px) {
+  .form-container {
+    top: 25%;
+    left: 5%;
+    width: 90%;
+    font-size: 0.75rem; /* Adjust font size to fit on very small screens */
+  }
+}
+
+.input-group {
+  flex-direction: column;
+}
+
+.input-group input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/**********************footer****************************/
+
+.footer {
+  background-color: #1d2672;
+  color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.footer-logo img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-logo p {
+  font-size: 1rem;
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.footer-links h3 {
+  font-size: 1.5rem;
+  margin-top: 5px;
+  color: #ffffff;
+  text-align: left;
+  left: 22px;
+}
+.pvt {
+  position: relative;
+margin-bottom: 0%;
+margin-top: -85px;
+color: white;
+}
+
+.footer-social-media {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.footer-social-media h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+  display: inline;
+  padding-left: 25px;
+}
+
+.footer-links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: inline;
+  font-size: 1rem;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+  display: inline;
+}
+
+.footer-robot {
+  flex: 1;
+  min-width: 250px;
+  text-align: right;
+}
+
+.footer-robot img {
+  max-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo, .footer-links, .footer-social-media, .footer-robot {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-robot {
+    text-align: center;
+  }
+}

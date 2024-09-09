@@ -1,0 +1,273 @@
+/******************animation******************************/
+
+body {
+  
+    background-color: #ffffff;
+    height: auto;
+    margin: 0;
+    position: relative;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  .driving-excellence-in-container {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-weight: 600;
+    opacity: 0;
+ 
+    animation: wakeUp 2s ease-in-out forwards;
+  }
+  
+  @keyframes wakeUp {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  .subline {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.28rem;
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 400;
+    opacity: 0;
+    animation: wakeUp 2s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+  
+  
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: bounce 0.3s ease-in-out;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(-10px) scale(1.08);
+    }
+    50% {
+      transform: translateY(-15px) scale(1.08);
+    }
+  }
+  
+
+  .navbar-scrolled {
+    background-color: #710ed4;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-scrolled .nav-link,
+  .navbar-scrolled .fa-bars {
+    color: #7f4722;
+    transition: color 0.3s ease;
+  }
+  
+
+
+
+
+  /* Scroll Reveal Animation */
+@keyframes scrollReveal {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .scroll-reveal {
+    opacity: 0;
+    animation: scrollReveal 0.8s ease-in-out forwards;
+  }
+  
+  .scroll-reveal:nth-child(even) {
+    animation-delay: 0.9s; /* Add delay for even elements */
+  }
+  
+  .scroll-reveal:nth-child(odd) {
+    animation-delay: 0.9s; /* Add delay for odd elements */
+  }
+  
+
+
+
+
+  @keyframes wakeUpHover {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+/*********************what we do*************-************************/
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-image {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 45%;
+    margin-left: -240px;
+    
+}
+
+.main-image img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.service-box {
+    text-align: center;
+    float: right;
+    margin-right: -10px;
+}
+
+.service-box .icon img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+    
+}
+
+.service-box h3 {
+    font-size: 1.8rem;
+    color: #003366;
+    font-weight: 520;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 300px;
+    
+}
+
+.main-image img:hover {
+  transform: translateX(-40px) translateY(-48px); 
+/* Moves the image slightly to the left and up on hover */
+}
+
+
+
+@media (max-width: 992px) {
+  .services-grid {
+      grid-template-columns: 1fr 1fr; /* Adjust grid to 2 columns */
+      gap: 30px; /* Adjust gap */
+  }
+  
+  .main-image {
+      width: 80%; /* Adjust main image width */
+      margin-left: 0; /* Remove negative margin */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+      grid-template-columns: 1fr; /* Single column layout */
+  }
+  
+  .service-box {
+      text-align: center; /* Center text for small screens */
+  }
+  
+  .service-box p {
+      max-width: 100%;
+  }
+  
+  .main-image {
+      width: 100%; /* Full width for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .main-image {
+      width: 100%; /* Full width for very small screens */
+  }
+  
+  .service-box h3 {
+      font-size: 1.25rem; /* Slightly smaller heading */
+  }
+  
+  .service-box p {
+      font-size: 0.9rem; /* Slightly smaller text */
+  }
+}
+
+
+
+
+
+
+
